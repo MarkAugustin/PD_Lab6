@@ -1,0 +1,243 @@
+* {
+	font-family: "Roboto", sans-serif;
+	box-sizing: border-box;
+	font-weight: 400;
+}
+
+body {
+background: #2193b0;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to right, #6dd5ed, #2193b0);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to right, #6dd5ed, #2193b0); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+	
+	color: white;
+	padding: 50px;
+}
+
+#message {
+	display: block;
+	border: none;
+	background: rgba(255, 255, 255, .5);
+	border-radius: 10px;
+	padding: 20px;
+	color: white;
+	outLine: none;
+	width: 98%;
+	font-size: 30px;
+}
+#message::placeholder {
+	color: rgba(255, 255, 255, .5);
+}
+#key {
+	display: block;
+	border: none;
+	margin-top: 10px;
+	background: rgba(255, 255, 255, .5);
+	text-decoration-color: black;
+	border-radius: 10px;
+	padding: 20px;
+	color: white;
+	outLine: none;
+	width: 98%;
+	font-size: 30px;
+}
+#key::placeholder {
+	color: rgba(255, 255, 255, .5);
+}
+#ENC {
+	display: block;
+	border: none;
+	margin-top: 10px;
+	margin-right: 1px;
+	float:left;
+
+background: #654ea3;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to right, #eaafc8, #654ea3);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to left, #eaafc8, #654ea3); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+	border-radius: 10px;
+	padding: 20px;
+	color: white;
+	outLine: none;
+	width: 49%;
+	font-size: 20px;
+	text-transform: uppercase;
+	font-weight: bold;
+	cursor: pointer;
+	margin-bottom: 15px;
+}
+#ENC:hover {
+	opacity: .9;
+}
+#DEC {
+	display: block;
+	border: none;
+	margin-top: 10px;
+	margin-left: 1px;
+	float:left;
+
+background: #654ea3;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to right, #eaafc8, #654ea3);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to right, #eaafc8, #654ea3); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+	border-radius: 10px;
+	padding: 20px;
+	color: white;
+	outLine: none;
+	width: 49%;
+	font-size: 20px;
+	text-transform: uppercase;
+	font-weight: bold;
+	cursor: pointer;
+	margin-bottom: 15px;
+}
+#DEC:hover {
+	opacity: .9;
+}
+#RSA_ENC {
+	display: block;
+	border: none;
+	margin-right: 1px;
+	float:left;
+
+	background: #16BFFD; /* fallback for old browsers */
+	background: -webkit-linear-gradient(to right, #CB3066, #16BFFD);
+	background: linear-gradient(to left, #c44772, #654ea3);
+
+	border-radius: 10px;
+	padding: 20px;
+	color: white;
+	outLine: none;
+	width: 49%;
+	font-size: 20px;
+	text-transform: uppercase;
+	font-weight: bold;
+	cursor: pointer;
+	margin-bottom: 15px;
+}
+#RSA_ENC:hover {
+	opacity: .9;
+}
+#RSA_DEC {
+	display: block;
+	border: none;
+	margin-left: 1px;
+	float:left;
+
+	background: #16BFFD; /* fallback for old browsers */
+	background: -webkit-linear-gradient(to left, #CB3066, #16BFFD);
+	background: linear-gradient(to right, #c44772, #654ea3);
+
+	border-radius: 10px;
+	padding: 20px;
+	color: white;
+	outLine: none;
+	width: 49%;
+	font-size: 20px;
+	text-transform: uppercase;
+	font-weight: bold;
+	cursor: pointer;
+	margin-bottom: 15px;
+}
+#RSA_DEC:hover {
+	opacity: .9;
+}
+#KEYS {
+	display: block;
+	border: none;
+
+	background: #16BFFD; /* fallback for old browsers */
+	background: -webkit-linear-gradient(to left, #CB3066, #16BFFD);
+	background: linear-gradient(to right, #c44772, #654ea3);
+
+	border-radius: 10px;
+	padding: 20px;
+	color: white;
+	outLine: none;
+	width: 98%;
+	font-size: 20px;
+	text-transform: uppercase;
+	font-weight: bold;
+	cursor: pointer;
+	margin-bottom: 15px;
+}
+#KEYS:hover {
+	opacity: .9;
+}
+#SIGN {
+	display: block;
+	border: none;
+	margin-right: 1px;
+	float:left;
+
+	background: #16BFFD; /* fallback for old browsers */
+	background: -webkit-linear-gradient(to left, #CB3066, #16BFFD);
+	background: linear-gradient(to left, #c44772, #654ea3);
+
+	border-radius: 10px;
+	padding: 20px;
+	color: white;
+	outLine: none;
+	width: 49%;
+	font-size: 20px;
+	text-transform: uppercase;
+	font-weight: bold;
+	cursor: pointer;
+	margin-bottom: 15px;
+}
+#SIGN:hover {
+	opacity: .9;
+}
+#VER {
+	display: block;
+	border: none;
+	margin-left: 1px;
+	float:left;
+
+	background: #16BFFD; /* fallback for old browsers */
+	background: -webkit-linear-gradient(to left, #CB3066, #16BFFD);
+	background: linear-gradient(to right, #c44772, #654ea3);
+
+	border-radius: 10px;
+	padding: 20px;
+	color: white;
+	outLine: none;
+	width: 49%;
+	font-size: 20px;
+	text-transform: uppercase;
+	font-weight: bold;
+	cursor: pointer;
+	margin-bottom: 15px;
+}
+#VER:hover {
+	opacity: .9;
+}
+#signature {
+	display: block;
+	border: none;
+	margin-bottom: 10px;
+	background: rgba(255, 255, 255, .5);
+	border-radius: 10px;
+	padding: 20px;
+	color: white;
+	outLine: none;
+	width: 98%;
+	font-size: 30px;
+}
+#signature::placeholder {
+	color: rgba(255, 255, 255, .5);
+}
+
+#info {
+	display: block;
+	border: none;
+	margin-top: 100px;
+	background: rgba(255, 255, 255, .5);
+	border-radius: 10px;
+	padding: 20px;
+	color: white;
+	outLine: none;
+	width: 98%;
+	font-size: 30px;
+	word-wrap: break-word;
+    word-break: break-all;
+}

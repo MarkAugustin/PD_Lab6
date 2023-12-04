@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title></title>
+
+	<script src="eel.js"></script>
+	<link rel="icon" type="image/png" href="/favicon.png">
+	<link rel="stylesheet" href="main.css">
+	<link href=" https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
+</head>
+<body>
+
+	<input id="message" type="text" placeholder="Введите сообщение" required="" value="">
+	<input id="key" type="text" placeholder="Введите ключ" required="" value="">
+	<div id="AES">
+		<div class="AES"><button id="ENC">Зашифровать в AES</button></div>
+		<div class="AES"><button id="DEC">Дешифровать из AES</button></div>
+	</div>
+	
+	<div id="RSA">
+		<div class="RSA"><button id="RSA_ENC">Зашифровать в RSA</button></div>
+		<div class="RSA"><button id="RSA_DEC">Дешифровать из RSA</button></div>
+	</div>
+		<div class="KEYS"><button id="KEYS">генерировать ключи RSA</button></div>
+	<input id="signature" type="text" placeholder="Введите сообщение для создания подписи" required="" value="">
+	<div id="DSA">
+		<div class="SIGN"><button id="SIGN">Создать подпись DSA</button></div>
+		<div class="VER"><button id="VER">Проверить подпись DSA</button></div>
+	</div>
+	<div id="info">
+	
+	</div>
+
+	<script src=" https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js "></script>
+	<script type="text/javascript">
+		async function ENC_AES() {
+			let message = document.getElementById('message').value;
+			let key = document.getElementById('key').value;
+			let a = "1";
+			let res =  await eel.AES(message,key,a)();
+			document.getElementById('info').innerHTML = res;
+		}
+		async function DEC_AES() {
+			let message = document.getElementById('message').value;
+			let key = document.getElementById('key').value;
+			let a = "2";
+			let res =  await eel.AES(message,key,a)();
+			document.getElementById('info').innerHTML = res;
+		}
+		async function ENC_RSA() {
+			let message = document.getElementById('message').value;
+			let key = document.getElementById('key').value;
+			let a = "1";
+			let res =  await eel.RSA(message,key,a)();
+			document.getElementById('info').innerHTML = res;
+		}
+		async function DEC_RSA() {
+			let message = document.getElementById('message').value;
+			let key = document.getElementById('key').value;
+			let a = "2";
+			let res =  await eel.RSA(message,key,a)();
+			document.getElementById('info').innerHTML = res;
+		}
+		async function KEY_GEN() {
+			let res =  await eel.key_gen()();
+			document.getElementById('info').innerHTML = res;
+		}
+		async function CR_SG() {
+			let message = document.getElementById('signature').value;
+			let res =  await eel.SIGN(message)();
+			document.getElementById('info').innerHTML = res;
+		}
+		async function VER_SG() {
+			let message = document.getElementById('signature').value;
+			let res =  await eel.VER(message)();
+			document.getElementById('info').innerHTML = res;
+		}
+		jQuery('#ENC').on('click', function() {ENC_AES();});
+		jQuery('#DEC').on('click', function() {DEC_AES();});
+		jQuery('#RSA_ENC').on('click', function() {ENC_RSA();});
+		jQuery('#RSA_DEC').on('click', function() {DEC_RSA();});
+		jQuery('#KEYS').on('click', function() {KEY_GEN();});
+		jQuery('#SIGN').on('click', function() {CR_SG();});
+		jQuery('#VER').on('click', function() {VER_SG();});
+	</script>
+	
+</body>
+</html>
